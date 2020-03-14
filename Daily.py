@@ -12,6 +12,8 @@ driver.implicitly_wait("10")
 driver.get(url)
 
 #登录
+#driver.find_element_by_id('i_user').send_keys("你的学号")
+#driver.find_element_by_id('i_pass').send_keys("你的密码")
 driver.find_element_by_link_text("登录").click()
 driver.implicitly_wait("20")
 
