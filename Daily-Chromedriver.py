@@ -31,3 +31,4 @@ driver.find_element_by_id("commit").click()
 
 driver.quit()
 print("提交成功")
+time.sleep(5)
