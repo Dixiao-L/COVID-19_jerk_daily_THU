@@ -1,3 +1,5 @@
+import tkinter
+import tkinter.messagebox
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
@@ -27,8 +29,12 @@ driver.find_element_by_name("【日报】学生健康和出行情况报告").cli
 
 #提交
 time.sleep(15)
-driver.find_element_by_id("commit").click()
+try:
+    driver.find_element_by_id("commit").click()
+except :
+    time.sleep(15)
+    driver.find_element_by_id("commit").click()
 
 driver.quit()
-print("提交成功")
-time.sleep(5)
+#弹窗提示
+tkinter.messagebox.showinfo("提示","提交成功")
